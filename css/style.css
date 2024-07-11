@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root{
+  --main-color:#272B30;
+  --main-font: "Nerko One", cursive;
+  --main-color-active:#0099CC;
+  --main-background-nav:#3A497B;
+  --text-card:"Comfortaa", sans-serif;
+  --card-color:#939598;
+  --font-test: "Playwrite NZ", cursive;
+}
+img{
+  object-fit: cover;
+ 
+}
+a{
+  color: white !important;
+  font-weight: lighter;
+  text-decoration: none;
+}
+/* .lyner{
+  position: fixed;
+  inset: 0;
+  background-color: #0099CC;
+  z-index: 200
+} */
+body{
+    margin: 0;
+    background-color: #272B30;
+    font-family: var(--main-font);
+  
+   
+}
+.logoImage{
+    width:15%;
+}
+.contHome{
+  margin-top: 11%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: var(--main-font);
+  font-size: 15px;
+  background-color: var(--main-background-nav) !important;
+  
+}
+.navbar{
+  background-image: url(../img/wraper.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #272B30;
+  z-index: 2000;
+  position: sticky;
+  top: -25%;
+
+}
+.navbar-nav .nav-link.active{
+color: var(--main-color-active) !important;
+}
+.navbar-nav .nav-link{
+  transition: .4s;
+}
+.navbar-nav .nav-link:hover{
+color: var(--main-color-active) !important;
+  
+}
+.card{
+  background-color: #272B30;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+.card .card-text{
+  font-family: var(--text-card);
+  font-size: 13px;
+  color: var(--card-color) ;
+}
+.card::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.189);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+col{
+  perspective: 100px;
+}
+.card:hover{
+  /* transform: scale(1.1); */
+  translate: -.3px -4px -100px;
+
+}
+.card:hover::before{
+  background-color: transparent;
+}
+small{
+  color: white !important;
+}
+.modfiyBtn{
+  border-radius: 10%;
+  border: none;
+  padding-inline: 5%;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader{
+margin: auto;
+margin-top: 10%;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+.close{
+  cursor: pointer;
+}
+.showData{
+  padding: 10px 30px;
+  background-color: rgb(230, 223, 17);
+  border-radius: 4%;
+  color: black !important;
+  margin-top: 5% !important;
+  display: block;
+  width: fit-content;
+  transition: .3s;
+  font-size: 17px;
+}
+.showData:hover{
+  /* background-color: #0099cc90; */
+  transform: scaleX(1.1);
+  letter-spacing: .5px;
+}
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background: #32383e ;
+}
+::-webkit-scrollbar-thumb{
+  background: #1F2226;
+  border-radius: 20%;
+  height: 30px;
+  padding: 5px 20px;
+  
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@media (max-width:577px){
+  .logoImage{
+    width: 50%;
+  }
+  .card:hover{
+    transform: scale(0.5s);
+  }
+  .navbar{
+    z-index: 2000;
+    position: sticky;
+    top: -7%;
+  }
+  .imgAndDetalis{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .dnameAndbClose{
+    margin-block: 5%;
+    padding-inline: 5%;
+  }
+  .contentGame{
+    padding-block: 10%;
+    padding-inline: 3% !important;
+    /* padding-left: 0 !important; */
+  }
+}
+
