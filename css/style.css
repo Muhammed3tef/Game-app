@@ -101,6 +101,7 @@ small {
   border-radius: 10%;
   border: none;
   padding-inline: 5%;
+  padding-block: 2%;
 }
 .loader {
   width: 48px;

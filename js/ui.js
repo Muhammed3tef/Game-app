@@ -175,7 +175,7 @@ class Ui {
                 <div class="card-body">
                   <div class="mainTitle p-2 d-flex justify-content-between align-items-center">
                     <h5 class="card-title">${respnse[i].title}</h5>
-                    <button class="bg-info modfiyBtn">Free</button>
+                    <a class="bg-info modfiyBtn">Free</a>
                   </div>
                   <p class="card-text p-1">${respnse[i].short_description}</p>
                 </div>
