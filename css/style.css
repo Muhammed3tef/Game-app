@@ -313,7 +313,7 @@ small {
   height: 44px;
 }
 button,
-button::after {
+button::after :not(.navbar-toggler) {
   padding: 10px 20px;
   font-size: 18px;
   background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
@@ -327,7 +327,7 @@ button::after {
   margin-top: 10px;
 }
 
-button::after {
+button::after :not(.navbar-toggler) {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -352,7 +352,7 @@ button::after {
   clip-path: var(--slice-0);
 }
 
-button:hover::after {
+button:hover::after :not(.navbar-toggler){
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
